@@ -5,21 +5,35 @@ package main
 import (
 	. "fmt"
 	"runtime"
-	"time"
 )
 
-var i = 0
+const (
+	INCREMENT = iota
+	DECREMENT
+)
+
+type numberServer struct {
+	messages        chan int
+	finish          chan int
+	data            int
+	finishedWorkers int
+	totalWorkers    int
+}
+
+var server = numberServer{make(chan int), make(chan int), 0, 0, 2}
 
 func incrementing() {
 	for n := 0; n < 1000000; n++ {
-		i++
+		server.messages <- INCREMENT
 	}
+	server.finish <- 1
 }
 
 func decrementing() {
 	for n := 0; n < 1000000; n++ {
-		i--
+		server.messages <- DECREMENT
 	}
+	server.finish <- 1
 }
 
 func main() {
@@ -29,8 +43,23 @@ func main() {
 	go incrementing()
 	go decrementing()
 
-	// We have no direct way to wait for the completion of a goroutine (without additional synchronization of some sort)
-	// We will do it properly with channels soon. For now: Sleep.
-	time.Sleep(500 * time.Millisecond)
-	Println("The magic number is:", i)
+	// Update the server
+eventLoop:
+	for {
+		select {
+		case op := <-server.messages:
+			switch op {
+			case INCREMENT:
+				server.data++
+			case DECREMENT:
+				server.data--
+			}
+		case <-server.finish:
+			server.finishedWorkers++
+			if server.finishedWorkers >= server.totalWorkers {
+				Println("The magic number is:", server.data)
+				break eventLoop
+			}
+		}
+	}
 }
