@@ -7,25 +7,27 @@
 
 int i = 0;
 
-// We use semaphore because we want the increment and decrement thread 
-// to take turns, and thus they need to both be able to unlock the lock.
-sem_t lock;
+// I changed my answer to using a mutex instead of a semaphore. The reason for this is
+// that the thread that locks the mutex will also have to be the one that unlocks it, 
+// there will not be any case where the resource should be unlocked from another
+// thread.
+pthread_mutex_t lock;
 
 // Note the return type: void*
 void* incrementingThreadFunction(){
     for (int n = 0; n < 1000000; n++) {
-        sem_wait(&lock);
+        pthread_mutex_lock(&lock);
         i++;
-        sem_post(&lock);
+        pthread_mutex_unlock(&lock);
     }
     return NULL;
 }
 
 void* decrementingThreadFunction(){
     for (int n = 0; n < 1000000; n++) {
-        sem_wait(&lock);
+        pthread_mutex_lock(&lock);
         i--;
-        sem_post(&lock);
+        pthread_mutex_unlock(&lock);
     }
     return NULL;
 }
@@ -37,12 +39,12 @@ int main(){
     pthread_t dec_thread_id;
     pthread_create(&dec_thread_id, NULL, decrementingThreadFunction, NULL);
 
-    sem_init(&lock, 0, 1);
+    pthread_mutex_init(&lock, 0);
 
     pthread_join(inc_thread_id, NULL);
     pthread_join(dec_thread_id, NULL);
 
-    sem_destroy(&lock);
+    pthread_mutex_destroy(&lock);
     printf("The magic number is: %d\n", i);
     return 0;
 }
