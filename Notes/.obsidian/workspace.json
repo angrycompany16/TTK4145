@@ -1,0 +1,169 @@
+{
+  "main": {
+    "id": "34275c7a61b1aaa4",
+    "type": "split",
+    "children": [
+      {
+        "id": "04b93f5bddcecee3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "60db28add30b50d6",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "944ec34c6d9a5749",
+    "type": "split",
+    "children": [
+      {
+        "id": "bf8971b5333d9a99",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "092b566c32d82ccc",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "e1dc5b0202887d20",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "0d2188380720f0a2",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "92c1d8a87b7ad51d",
+    "type": "split",
+    "children": [
+      {
+        "id": "e258d24fa184043d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "544281966e51ea94",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "fb09a62887601894",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Sanntid note.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Sanntid note"
+            }
+          },
+          {
+            "id": "ce295ae0cd572f46",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "04ff9b0f2f9aa46f",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Sanntid note.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Sanntid note"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "60db28add30b50d6",
+  "lastOpenFiles": [
+    "Canvas test.canvas",
+    "Notes video preparation Exercise 2.md",
+    "2025-01-20.md",
+    "TTK4145 - Sanntidsprogrammering.md",
+    "Untitled.md",
+    "Code Lecture 14.01.24 - Code Quality 1.md"
+  ]
+}

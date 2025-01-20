@@ -1,0 +1,7 @@
+{
+	"nodes":[
+		{"id":"7230be8d8acf1e07","x":-260,"y":60,"width":250,"height":60,"type":"text","text":""},
+		{"id":"3c84b5a7b77f3357","x":80,"y":-180,"width":400,"height":400,"type":"file","file":"TTK4145 - Sanntidsprogrammering.md"}
+	],
+	"edges":[]
+}
