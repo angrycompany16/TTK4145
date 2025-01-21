@@ -37,3 +37,24 @@ Coul
 	- Use conventions to fake private variables, constants, name spaces etc. if the language does not support it
 	- Do not use one variables for two things
 	- Give better names to temporary, loop, 'flags', status and boolean variables (if scope is not significant)
+
+MovingUpDoorOpen
+MovingDown
+StationaryDoorOpen
+
+
+enum State {
+	MovinUPDoorCLosed
+	...
+}
+
+State currentSate
+
+switch currentState {
+	case ...
+}
+
+Update() {
+	if TRansition
+		currentState = ...
+}
