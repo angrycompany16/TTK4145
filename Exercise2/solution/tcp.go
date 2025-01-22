@@ -9,7 +9,7 @@ import (
 )
 
 func nullTerminatedTCP() {
-	server, err := net.ResolveTCPAddr("tcp", "10.24.15.63:33546")
+	server, err := net.ResolveTCPAddr("tcp", "10.100.23.204:33546")
 	if err != nil {
 		log.Fatal(err)
 	}

@@ -14,7 +14,7 @@ import (
 func listenUDP() {
 	address := net.UDPAddr{
 		IP:   nil,
-		Port: 30000,
+		Port: 20013,
 	}
 
 	conn, err := net.ListenUDP("udp", &address)
@@ -35,7 +35,7 @@ func listenUDP() {
 			continue
 		}
 
-		fmt.Print(string(buffer[:n]))
+		fmt.Println(string(buffer[:n]))
 		time.Sleep(time.Millisecond * 100)
 	}
 }

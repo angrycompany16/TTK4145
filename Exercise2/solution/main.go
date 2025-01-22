@@ -7,7 +7,8 @@ func main() {
 	// go fixedSizeTCP()
 	go nullTerminatedTCP()
 
-	// go
+	// go listenUDP()
+	// go sendUDP()
 
 	for {
 

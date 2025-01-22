@@ -8,7 +8,7 @@ What is the difference between *concurrency* and *parallelism*?
 
 What is the difference between a *race condition* and a *data race*? 
 > A race condition happens when the behaviour of a program depends on the timing of events that cannot be controlled, such as (in the shared variable tasks) the way the scheduler distributes processing power to the threads. This leads to inconcistent results when running the program. A data race, on the other hand, is a more concrete error which occurs when two instructions try to access the same register and at least one of them is a write. For example, a write and read at the same time cause a data race.
- 
+
 *Very* roughly - what does a *scheduler* do, and how does it do it?
 > A scheduler chooses which thread gets to use the CPU processing power. This can be done in a variety of ways, one of which is to choose randomly (which is surprisingly effective!) 
 
