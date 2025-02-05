@@ -5,4 +5,5 @@
 ### Video notes:
 * Video 1 had no notes
 * [[Notes video preparation Exercise 2|Exercise 2 preparation video]]
+* [[Notes video preparation Exercise 3|Exercise 3 preparation video]]
 * 
