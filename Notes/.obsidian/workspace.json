@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Lecture 04.02.24 - Something something redundancy.md",
+                "file": "Lecture 11.02.24 - Atomic actions.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Lecture 04.02.24 - Something something redundancy"
+              "title": "Lecture 11.02.24 - Atomic actions"
             }
           },
           {
@@ -199,6 +199,7 @@
   "active": "60db28add30b50d6",
   "lastOpenFiles": [
     "TTK4145 - Sanntidsprogrammering.md",
+    "Lecture 11.02.24 - Atomic actions.md",
     "Lecture 04.02.24 - Something something redundancy.md",
     "Lecture 28.01.24 - Something.md",
     "Notes video preparation Exercise 3.md",
